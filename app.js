@@ -35,7 +35,7 @@ app.use(express.static(__dirname+"/public"));//saving the path directory
 app.use(bodyparser.urlencoded({extended:true}));//body-parser is an NPM package that parses incoming request bodies in a middleware before your handlers, available under the req.body property.//middleware for parsing bodies from URL
 app.use(methodOverride("_method"));//Lets you use HTTP verbs such as PUT or DELETE in places where the client doesn’t support it.
 app.use(flash());//to use flash library to flash message(notifaction type).
-mongoose.connect("mongodb://localhost:27017/test");//to connect server to database.
+mongoose.connect("mongodb+srv://ambulance:ambulance@cluster0.kgiuj.mongodb.net/ambulance?retryWrites=true&w=majority");//to connect server to database.
 
 //setting up passport for auth //https://stackoverflow.com/questions/27637609/understanding-passport-serialize-deserialize
 app.use(passport.initialize());//intilazing passport
